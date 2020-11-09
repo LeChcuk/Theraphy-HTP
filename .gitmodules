@@ -1,0 +1,3 @@
+[submodule "react"]
+	path = react
+	url = https://github.com/pjw9412/theraphy-react-gh-pages
