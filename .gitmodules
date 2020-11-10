@@ -1,3 +1,6 @@
 [submodule "react"]
 	path = react
 	url = https://github.com/pjw9412/theraphy-react-gh-pages
+[submodule "nodejs"]
+	path = nodejs
+	url = https://github.com/pjw9412/theraphy-nodejs-heroku
