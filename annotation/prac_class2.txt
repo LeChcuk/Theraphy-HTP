@@ -1,0 +1,17 @@
+window, 0
+door, 1
+house, 2
+tree, 3
+triangle roof, 4
+roof, 5
+veiled window, 6
+mountain, 7
+smoking chimney, 8
+fense, 9
+ground line, 10
+patterned roof, 11
+side door house, 12
+poor wall, 13
+half sun, 14
+solid wall, 15
+2nd floor window house, 16
