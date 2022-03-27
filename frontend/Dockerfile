@@ -1,0 +1,31 @@
+# FROM 명령어는 빌드 단계를 초기화하고 후속 명령에 대한 base image를 설정한다.
+# 따라서 모든 Dockerfile은 FROM 명령어로부터 시작한다.
+# alpine image는 5MB 정도의 작은 용량을 보유해서 Docker Documnet가 권장한다. 
+# FROM <image>[:<tag>]
+# FROM <image>[@<digest>]
+FROM node:14-alpine
+
+# 작업 디렉토리를 set하여 이후 RUN, CMD, COPY 등의 명령이 이 작업 디렉토리에서 수행된다
+# WORKDIR command를 사용하면 절대 경로로 일일이 path을 명시할 필요 없이 상대 경로로 간편하게(.) 사용할 수 있다
+WORKDIR /app
+
+# host 컴퓨터에 있는 파일을 Docker 이미지의 파일 시스템으로 복사
+# COPY <src> <dest>
+COPY package*.json ./
+
+# RUN 명령은 Dockefile로 Docker image를 build하는 중간에 수행된다.
+# 보통 이미지 안에 특정 소프트웨어를 설치하기 위해 많이 사용된다
+RUN npm install --silent
+
+# 소스 코드 가져오기
+COPY . .
+
+# CMD 명령은 Docker image로 Docker container를 생성한 뒤 container를 실행할 떄 수행된다.
+# CMD와 ENTRPYPOINT는 유사하게 동작하나, CMD는 CLI에서 명령어 입력을 통해 좀 더 가변적으로 동작시킬 수가 있다.
+ENTRYPOINT npm start
+
+# EXPOSE <port>/<protocol>
+# default protocol : TCP
+EXPOSE 3000
+
+# docker build -t <image name> <dockerfile path>

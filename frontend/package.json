@@ -1,0 +1,60 @@
+{
+    "name": "theraphy",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@material-ui/core": "^4.11.0",
+        "@material-ui/icons": "^4.9.1",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "axios": "^0.20.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "global": "^4.4.0",
+        "http-proxy-middleware": "^1.0.5",
+        "md5-file": "^5.0.0",
+        "multer": "^1.4.2",
+        "node-sass": "^4.14.1",
+        "react": "^16.13.1",
+        "react-async": "^10.0.1",
+        "react-dom": "^16.13.1",
+        "react-dropzone": "^11.2.0",
+        "react-ga": "^3.1.2",
+        "react-js-banner": "^0.5.2",
+        "react-modal": "^3.11.2",
+        "react-scripts": "^3.4.3",
+        "react-spinners": "^0.9.0",
+        "styled-components": "^5.2.0",
+        "uuid4": "^2.0.2",
+        "yarn": "^1.22.10"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "proxy": "http://localhost:3001",
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "gh-pages": "^3.1.0"
+    },
+    "homepage": "http://localhost:3000"
+}
