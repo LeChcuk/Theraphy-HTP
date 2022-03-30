@@ -27,5 +27,3 @@ ENTRYPOINT npm start
 # EXPOSE <port>/<protocol>
 # default protocol : TCP
 EXPOSE 3000
-
-# docker build -t <image name> <dockerfile path>

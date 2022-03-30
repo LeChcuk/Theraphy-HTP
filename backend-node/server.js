@@ -1,12 +1,36 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 const md5File = require('md5-file');
 const cors = require('cors');
+const morgan = require('morgan');
+const logger = require('./logger');
+const helmet = require('helmet');
+const hpp = require('hpp');
 const axiosRequest = require('./module/axiosRequest.js');
 const multerOption = require('./module/multerOption.js');
 const port = process.env.PORT || 3001;
 
+const sanitizeHtml = require('sanitize-html');
+
+const html = "<script>location.href = 'https://github.co.kr'</script>";
+console.log(sanitizeHtml(html));
+
 app.use(cors());
+app.use((req, res, next) => {
+    const error = new Error(`${req.method} ${req.url} 라우터가 없습니다`);
+    error.status = 404;
+    logger.info('hello');
+    logger.error(error.message);
+    next(error);
+});
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(morgan('combined')); // combined 모드는 더 많은 사용자 정보를 남기기 때문에 버그 해결에 유용
+    app.use(helmet({ contentSecurityPolicy: false }));
+    app.use(hpp());
+} else {
+    app.use(morgan('dev'));
+}
 
 app.post('/', multerOption.single('image'), async (request, response) => {
     try {
