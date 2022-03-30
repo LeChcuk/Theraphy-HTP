@@ -3,9 +3,10 @@ const app = express();
 const md5File = require('md5-file');
 const cors = require('cors');
 const morgan = require('morgan');
-const logger = require('./logger.js');
 const helmet = require('helmet');
 const hpp = require('hpp');
+const logger = require('./logger.js');
+
 const axiosRequest = require('./module/axiosRequest.js');
 const multerOption = require('./module/multerOption.js');
 const port = process.env.PORT || 3001;

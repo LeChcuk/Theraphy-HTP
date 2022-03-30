@@ -17,6 +17,8 @@ COPY package.json package-lock.json ./
 # ci는 package-lock.json을 참고하여 개발에 활용된 버전 그대로를 설치한다.
 RUN npm ci
 
+ENV NODE_PATH ./node_modules
+
 COPY /module ./module
 COPY server.js .
 
