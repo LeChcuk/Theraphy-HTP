@@ -112,7 +112,7 @@ function Upload() {
                     console.log('ASYNC');
                     console.log(formData);
                     // return await axios.post('http://localhost:3001/', formData);
-                    return await axios.post('http://18.207.197.35/:3001/', formData);
+                    return await axios.post('http://172.17.0.1/:3001/', formData);
                 } catch (error) {
                     console.log(error);
                 }

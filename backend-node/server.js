@@ -10,11 +10,6 @@ const axiosRequest = require('./module/axiosRequest.js');
 const multerOption = require('./module/multerOption.js');
 const port = process.env.PORT || 3001;
 
-const sanitizeHtml = require('sanitize-html');
-
-const html = "<script>location.href = 'https://github.co.kr'</script>";
-console.log(sanitizeHtml(html));
-
 app.use(cors());
 app.use((req, res, next) => {
     const error = new Error(`${req.method} ${req.url} 라우터가 없습니다`);
