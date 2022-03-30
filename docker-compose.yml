@@ -10,17 +10,9 @@ services:
     tty: true
   backend-node:
     build: ./backend-node
-    # 연결할 외부 디렉토리 : 컨테이너 내 디렉토리
-    # volumes:
-    # - ./backend:/usr/src/app
     ports:
       - "3001:3001"
-      # 환경변수 설정
-      # environment: 
-      # - DBHOST=database
   backend-flask:
-    # # Dockerfile이 있는 위치
     build: ./backend-flask
-    # # 내부에서 개방할 포트 : 외부에서 접근할 포트
     ports:
       - "5000:5000"
