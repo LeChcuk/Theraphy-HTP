@@ -26,7 +26,7 @@ jobs:
 
     steps:
     - name: Checkout source code
-      uses: actions/checkout@v3 # action
+      uses: actions/checkout@v3
 
     - name: Set up Docker Buildxc
       id: buildx
@@ -34,7 +34,7 @@ jobs:
 
     # - name: Run Docker-compose #
       # run: docker-compose up -d # script
-
+      
     # - name: Build and push
     #   id: docker_build
     #   uses: docker/build-push-action@v2
