@@ -11,10 +11,10 @@ on:
 env:
   # DOCKER_IMAGE: ghcr.io/{Repository author}/{Repository name} # 예를 들면, ghcr.io/dolphago/github-follow-unfollow
   # VERSION: ${{ github.sha }}
-  PROJECT_NAME: cicd_project
-  BUCKET_NAME: theraphy-cicd-bucket
-  CODE_DEPLOY_APP_NAME: cicdapp
-  DEPLOYMENT_GROUP_NAME: cicdapp_deploy
+  PROJECT_NAME: theraphy-htp-project
+  BUCKET_NAME: theraphy-htp-bucket
+  CODE_DEPLOY_APP_NAME: theraphy-CICD-codeDeploy
+  DEPLOYMENT_GROUP_NAME: cicdRole_codeDeploy
 
 permissions:
   id-token: write
