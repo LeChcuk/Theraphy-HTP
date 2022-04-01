@@ -16,6 +16,9 @@ env:
   CODE_DEPLOY_APP_NAME: cicdapp
   DEPLOYMENT_GROUP_NAME: cicdapp_deploy
 
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   build: # job의 이름
