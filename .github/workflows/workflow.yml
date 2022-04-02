@@ -52,7 +52,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ap-northeast-2
-        PATH_TO_DELETE: /$BUCKET_NAME/$PROJECT_NAME/*.zip
+        PATH_TO_DELETE: /$BUCKET_NAME/$PROJECT_NAME/49bf12f3d34f2beed3e22eb61b087128c650a1e6.zip
 
     - name: Upload to S3
       run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip
