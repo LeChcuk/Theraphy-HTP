@@ -5,20 +5,11 @@ const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const hpp = require('hpp');
-const logger = require('./logger.js');
-
 const axiosRequest = require('./module/axiosRequest.js');
 const multerOption = require('./module/multerOption.js');
 const port = process.env.PORT || 3001;
 
 app.use(cors());
-app.use((req, res, next) => {
-    const error = new Error(`${req.method} ${req.url} 라우터가 없습니다`);
-    error.status = 404;
-    logger.info('hello');
-    logger.error(error.message);
-    next(error);
-});
 
 if (process.env.NODE_ENV === 'production') {
     app.use(morgan('combined')); // combined 모드는 더 많은 사용자 정보를 남기기 때문에 버그 해결에 유용
