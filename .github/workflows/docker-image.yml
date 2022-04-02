@@ -1,5 +1,5 @@
 # workflow 이름 명시
-name: Docker Image CI
+name: gh-actions-AWS-EC2-theraphy-CICD
 
 # workflow의 trigger 설정
 on:
@@ -43,6 +43,7 @@ jobs:
     #     push: ${{ github.event_name != 'pull_request' }}
     #     tags: ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
 
+    # $GITHUB_SHA는 Github Actions에서 제공하는 환경변수.
     - name: Make Zip File
       run: zip -qq -r ./$GITHUB_SHA.zip .
       shell: bash
