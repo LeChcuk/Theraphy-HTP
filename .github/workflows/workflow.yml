@@ -9,8 +9,6 @@ on:
     branches: [ master ]
 
 env:
-  # DOCKER_IMAGE: ghcr.io/{Repository author}/{Repository name} # 예를 들면, ghcr.io/dolphago/github-follow-unfollow
-  # VERSION: ${{ github.sha }}
   PROJECT_NAME: theraphy-htp-project
   BUCKET_NAME: theraphy-htp-bucket
   CODE_DEPLOY_APP_NAME: theraphy-CICD-codeDeploy
@@ -31,18 +29,7 @@ jobs:
     - name: Set up Docker Buildxc
       id: buildx
       uses: docker/setup-buildx-action@v1
-
-    # - name: Run Docker-compose #
-      # run: docker-compose up -d # script
       
-    # - name: Build and push
-    #   id: docker_build
-    #   uses: docker/build-push-action@v2
-    #   with:
-    #     builder: ${{ steps.buildx.outputs.name }}
-    #     push: ${{ github.event_name != 'pull_request' }}
-    #     tags: ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
-
     # $GITHUB_SHA는 Github Actions에서 제공하는 환경변수.
     - name: Make Zip File
       run: zip -qq -r ./$GITHUB_SHA.zip .
@@ -54,15 +41,23 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-northeast-2
+
+    - name: Delete all files on S3
+      uses: vitorsgomes/s3-rm-action@master
+      with:
+        args: --recursive
+      env:
+        AWS_S3_BUCKET: ${{BUCKET_NAME}}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ap-northeast-2
     
     - name: Upload to S3
       run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip
 
-    - name: Code Deploy|
+    - name: Code Deploy
       run: >
         aws deploy create-deployment --application-name $CODE_DEPLOY_APP_NAME
         --deployment-config-name CodeDeployDefault.OneAtATime
         --deployment-group-name $DEPLOYMENT_GROUP_NAME
         --s3-location bucket=$BUCKET_NAME,bundleType=zip,key=$PROJECT_NAME/$GITHUB_SHA.zip
-    # - name: Build the Docker image e
-    # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
