@@ -14,9 +14,9 @@ env:
   CODE_DEPLOY_APP_NAME: theraphy-CICD-codeDeploy
   DEPLOYMENT_GROUP_NAME: cicdRole_codeDeploy
 
-permissions:
-  id-token: write
-  contents: read
+# permissions:
+#   id-token: write
+#   contents: read
 
 jobs:
   build: # job의 이름
@@ -32,12 +32,12 @@ jobs:
       run: zip -qq -r ./$GITHUB_SHA.zip .
       shell: bash
       
-    # - name: Configure AWS credentials
-    #   uses: aws-actions/configure-aws-credentials@v1
-    #   with:
-    #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    #     aws-region: ap-northeast-2
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-northeast-2
 
     # using AWS CLI at run
     - name: Delete all files on S3
