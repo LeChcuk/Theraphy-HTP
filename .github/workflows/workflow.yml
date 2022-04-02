@@ -23,13 +23,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # worflow에서 $GITHUB_WORKSPACE에 접근이 가능하게끔 해주는 action
     - name: Checkout source code
       uses: actions/checkout@v3
 
-    - name: Set up Docker Buildxc
-      id: buildx
-      uses: docker/setup-buildx-action@v1
-      
     # $GITHUB_SHA는 Github Actions에서 제공하는 환경변수.
     - name: Make Zip File
       run: zip -qq -r ./$GITHUB_SHA.zip .
@@ -42,23 +39,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-northeast-2
 
-    # - name: Delete all files on S3
-    #   uses: vitorsgomes/s3-rm-action@master
-    #   with:
-    #     args: --recursive
-    #   env:
-    #   # s3://theraphy-htp-bucket/theraphy-htp-project/49bf12f3d34f2beed3e22eb61b087128c650a1e6.zip
-    #     AWS_S3_BUCKET: $BUCKET_NAME
-    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    #     AWS_REGION: ap-northeast-2
-    #     PATH_TO_DELETE: ${{ github.event.ref }}
-
-    # AWS CLI
+    # using AWS CLI at run
     - name: Delete all files on S3
       run: aws s3 rm s3://$BUCKET_NAME/ --recursive --include "*"
 
-    - name: Upload to S3
+    - name: Upload .zip file to S3
       run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip
 
     - name: Code Deploy
