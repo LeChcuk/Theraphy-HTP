@@ -6,7 +6,7 @@ os: linux
 files:
   - source: / 
     destination: /home/ubuntu/Theraphy-HTP
-file_exists_behavior: OVERWITE
+file_exists_behavior: OVERWRITE
 
 permissions:
   - object: /home/ubuntu/Theraphy-HTP
