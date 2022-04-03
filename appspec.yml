@@ -2,7 +2,10 @@
 version: 0.0
 os: linux
 
-# 전체 파일을 EC2 서버의 destination 폴더에 저장하겠다.
+# codeDeploy lifecycle중 install 이벤트 발생 시,
+# 복사할 파일을 명시 (source)하고, '/'는 파일 전체.
+# 복사할 위치를 명시 (destination). 
+# S3 버킷의 파일은 .zip 파일인데, codeDeploy의 lifecycle 중 하나인 install 과정에서 압축을 해제해준다.
 files:
   - source: / 
     destination: /home/ubuntu/Theraphy-HTP
@@ -13,9 +16,9 @@ permissions:
     owner: ubuntu
     group: ubuntu
 
-# codeDeploy 수명 중 하나인 AfterInstall 발생 시 코드에서 deploy.sh를 수행하겠다는 이벤트
+# codeDeploy lifecycle 중 하나인 AfterInstall 이벤트 발생 시 코드에서 deploy.sh를 수행하겠다는 script
 hooks:
   AfterInstall:
-    - location: scripts/deploy.sh
+    - location: /deploy.sh
       timeout: 60
       runas: ubuntu

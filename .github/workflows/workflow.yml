@@ -14,10 +14,6 @@ env:
   CODE_DEPLOY_APP_NAME: theraphy-CICD-codeDeploy
   DEPLOYMENT_GROUP_NAME: cicdRole_codeDeploy
 
-# permissions:
-#   id-token: write
-#   contents: read
-
 jobs:
   build: # job의 이름
     runs-on: ubuntu-latest
@@ -48,7 +44,8 @@ jobs:
 
     - name: Code Deploy
       run: >
-        aws deploy create-deployment --application-name $CODE_DEPLOY_APP_NAME
+        aws deploy create-deployment 
+        --application-name $CODE_DEPLOY_APP_NAME
         --deployment-config-name CodeDeployDefault.OneAtATime
         --deployment-group-name $DEPLOYMENT_GROUP_NAME
         --s3-location bucket=$BUCKET_NAME,bundleType=zip,key=$PROJECT_NAME/$GITHUB_SHA.zip
