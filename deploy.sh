@@ -6,6 +6,7 @@ cd $REPOSITORY
 
 echo "> 실행"
 docker kill $(docker ps -q)
+docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 
-docker-compose up -dd
+docker-compose up -d
