@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# test
 
 REPOSITORY=/home/ubuntu/Theraphy-HTP
 cd $REPOSITORY
