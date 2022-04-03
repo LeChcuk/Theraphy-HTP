@@ -25,9 +25,6 @@ jobs:
       with:
         lfs: 'true'
     - run: git lfs pull
-    
-    # - name: checkoutLFS
-    #   run: git lfs pull
 
     # $GITHUB_SHA는 Github Actions에서 제공하는 환경변수.
     - name: Make Zip File
