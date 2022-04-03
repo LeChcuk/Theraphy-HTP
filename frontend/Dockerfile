@@ -20,6 +20,9 @@ RUN npm install --silent
 # 소스 코드 가져오기
 COPY . .
 
+# Invalid Host header 에러 처리를 위한 파일
+COPY webpackDevServer.config.js ./node_modules/react-scripts/config/
+
 # CMD 명령은 Docker image로 Docker container를 생성한 뒤 container를 실행할 떄 수행된다.
 # CMD와 ENTRPYPOINT는 유사하게 동작하나, CMD는 CLI에서 명령어 입력을 통해 좀 더 가변적으로 동작시킬 수가 있다.
 ENTRYPOINT npm start
