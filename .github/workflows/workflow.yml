@@ -22,6 +22,12 @@ jobs:
     # worflow에서 $GITHUB_WORKSPACE에 접근이 가능하게끔 해주는 action
     - name: Checkout source code
       uses: actions/checkout@v3
+      with:
+        lfs: 'true'
+    
+    - name: checkoutLFS
+      uses: actions/checkout@v3
+      run: git lfs pull
 
     # $GITHUB_SHA는 Github Actions에서 제공하는 환경변수.
     - name: Make Zip File
