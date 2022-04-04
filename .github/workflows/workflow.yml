@@ -2,6 +2,7 @@
 name: gh-actions-AWS-EC2-theraphy-CICD
 
 # workflow의 trigger 설정
+# test
 on:
   push: # push event
     branches: [ master ]
