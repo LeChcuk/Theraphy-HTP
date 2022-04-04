@@ -48,7 +48,7 @@ jobs:
       run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip
 
     - name : cp .h5 file from s3 to ec2
-      run: aws s3 cp s3://$BUCKET_NAME/$PROJECT_NAME/house3-1.h5 $REPOSITORY/backend-flask
+      run: sudo aws s3 cp s3://$BUCKET_NAME/$PROJECT_NAME/house3-1.h5 $REPOSITORY/backend-flask
 
     - name: Code Deploy
       run: >
