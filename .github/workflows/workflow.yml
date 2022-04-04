@@ -10,10 +10,11 @@ on:
     branches: [ master ]
 
 env:
-  PROJECT_NAME: theraphy-htp-project
   BUCKET_NAME: theraphy-htp-bucket
+  PROJECT_NAME: theraphy-htp-project
   CODE_DEPLOY_APP_NAME: theraphy-CICD-codeDeploy
   DEPLOYMENT_GROUP_NAME: cicdRole_codeDeploy
+  REPOSITORY: /home/ubuntu/Theraphy-HTP
 
 jobs:
   build: # job의 이름
@@ -40,11 +41,14 @@ jobs:
         aws-region: ap-northeast-2
 
     # using AWS CLI at run
-    - name: Delete all files on S3
-      run: aws s3 rm s3://$BUCKET_NAME/ --recursive --include "*"
+    - name: Delete all .zip files on S3
+      run: aws s3 rm s3://$BUCKET_NAME/ --recursive --include "*.zip"
 
     - name: Upload .zip file to S3
       run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip
+
+    - name : cp .h5 file from s3 to ec2
+      run: aws s3 cp s3://$BUCKET_NAME/$PROJECT_NAME/house3-1.h5 $REPOSITORY/backend-flask
 
     - name: Code Deploy
       run: >
