@@ -42,7 +42,7 @@ jobs:
 
     # using AWS CLI at run
     - name: Delete all .zip files on S3
-      run: aws s3 rm s3://$BUCKET_NAME/ --recursive --include "*.zip"
+      run: aws s3 rm s3://$BUCKET_NAME/ --exclude "*.h5" --include "*.zip" --recursive 
 
     - name: Upload .zip file to S3
       run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip
