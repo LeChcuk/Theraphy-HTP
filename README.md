@@ -1,5 +1,6 @@
 [![Docker CI](https://github.com/LeChcukbb/Theraphy-HTP/actions/workflows/docker-image.yml/badge.svg)](https://github.com/LeChcukbb/Theraphy-HTP/actions/workflows/docker-image.yml)
 
+![theraphy](https://user-images.githubusercontent.com/39594520/161876854-56228929-6b26-4091-8eec-32ff70a9b2ac.gif)
 
 
 # Theraphy-HTP
