@@ -1,4 +1,4 @@
-[![Docker CI](https://github.com/LeChcuk/Theraphy-HTP/actions/workflows/docker-image.yml/badge.svg)](https://github.com/LeChcuk/Theraphy-HTP/actions/workflows/docker-image.yml)
+[![Docker CI](https://github.com/LeChcukbb/Theraphy-HTP/actions/workflows/docker-image.yml/badge.svg)](https://github.com/LeChcukbb/Theraphy-HTP/actions/workflows/docker-image.yml)
 
 
 
