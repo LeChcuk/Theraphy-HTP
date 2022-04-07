@@ -8,12 +8,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-# COPY keras-retinanet .
-
-# COPY house3-1.h5 .
-
-# COPY Inference_model.py .
-
 WORKDIR /app/keras-retinanet
 
 RUN python setup.py install
@@ -26,8 +20,6 @@ WORKDIR /app
 RUN apt-get update
 
 RUN apt-get -y install libgl1-mesa-glx
-
-RUN apt-get -y install nginx
 
 ENTRYPOINT python Inference_model.py
 

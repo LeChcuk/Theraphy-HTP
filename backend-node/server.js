@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
     app.use(morgan('dev'));
 }
 
-app.post('/', multerOption.single('image'), async (request, response) => {
+app.post('/node', multerOption.single('image'), async (request, response) => {
     try {
         console.log(request.file);
         const fileName = request.file['filename'];
