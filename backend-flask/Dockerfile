@@ -25,7 +25,5 @@ ENTRYPOINT python Inference_model.py
 
 # ENTRYPOINT gunicorn Inference_model:app -b 0.0.0.0:5000 --timeout=10
 
-EXPOSE 5000
-
 # POST /predict
 # port :5000

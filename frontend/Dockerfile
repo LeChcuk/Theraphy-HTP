@@ -29,4 +29,3 @@ ENTRYPOINT npm start
 
 # EXPOSE <port>/<protocol>
 # default protocol : TCP
-EXPOSE 3000
