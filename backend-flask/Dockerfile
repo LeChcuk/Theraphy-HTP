@@ -23,6 +23,8 @@ RUN apt-get -y install libgl1-mesa-glx
 
 ENTRYPOINT python Inference_model.py
 
+EXPOSE 5000
+
 # ENTRYPOINT gunicorn Inference_model:app -b 0.0.0.0:5000 --timeout=10
 
 # POST /predict

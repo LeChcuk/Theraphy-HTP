@@ -3,34 +3,40 @@ services:
   nginx_proxy:
     image: nginx:latest
     ports:
-      - "80:80"
+      - 80:80
+      - 3000:3000
+      - 3001:3001
+      - 5000:5000
+      - 8080:8080
     depends_on:
       - frontend
       - backend-node
       - backend-flask
     restart: always
-    container_name: nginx_proxy
     volumes:
-      - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      # - ./nginx/default.conf:/etc/nginx/sites-available/default.conf
+      # - ./default.conf:/etc/nginx/sites-enabled/default.conf
+      - ./frontend/build/:/app/build/
       # host PC의 ./nginx/nginx.conf로 container의 /etc/nginx/nginx.conf를 대체
 
   frontend:
     build: ./frontend
     expose:
-      - "80"
-      - "3000"
-      - "8080"
-    container_name: frontend
-    # react-scripts 3.4.1 이상에서 발생하는 exited with code 0 에러 해결법
-    # https://github.com/facebook/create-react-app/issues/8688
+      - 3000
+      # ports:
+      #   - 3000:80
+      # react-scripts 3.4.1 이상에서 발생하는 exited with code 0 에러 해결법
+      # https://github.com/facebook/create-react-app/issues/8688
     stdin_open: true
     tty: true
 
   backend-node:
     build: ./backend-node
+    # ports:
+    #   - 3001:3001
     expose:
-      - "3001"
-    container_name: backend-node
+      - 3001
     environment:
       # 콘테이너 내 환경변수를 정의
       - NODE_PATH
@@ -38,10 +44,12 @@ services:
   backend-flask:
     build: ./backend-flask
     expose:
-      - "5000"
-    container_name: backend-flask
+      - 5000
+    # ports:
+    #   - 5000:5000
 
-# docker rm -f $(docker ps -aq)
-# docker rmi $(docker images -q)
+    # docker rm -f $(docker ps -aq)
+    # docker rmi $(docker images -q)
 
-# docker-compose build --no-cache && docker-compose up -d
+    # docker-compose build --no-cache && docker-compose up -d
+    # docker exec d96c6ad93d5b83bd25c2c1e36b92b95b0208ededb64a14cccf473d122a46537d  bash -c "cd /var/log/nginx; cat error.log"
