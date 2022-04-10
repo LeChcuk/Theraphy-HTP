@@ -20,6 +20,6 @@ RUN npm ci
 ENV NODE_PATH ./node_modules
 
 COPY /module ./module
-COPY server.js .
+COPY . .
 
 ENTRYPOINT npm run start
