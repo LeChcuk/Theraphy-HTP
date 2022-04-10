@@ -1,53 +1,48 @@
 version: '3'
 services:
   nginx_proxy:
-    image: nginx:latest
+    build: ./nginx
+    # local(host) 3000 포트와 컨테이너 안의 80번 포트를 매핑
     ports:
-      - 80:80
-      - 3000:3000
-      - 3001:3001
-      - 5000:5000
-      - 8080:8080
+      - 3000:80
     depends_on:
       - frontend
       - backend-node
       - backend-flask
     restart: always
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      # - ./nginx/default.conf:/etc/nginx/sites-available/default.conf
-      # - ./default.conf:/etc/nginx/sites-enabled/default.conf
-      - ./frontend/build/:/app/build/
-      # host PC의 ./nginx/nginx.conf로 container의 /etc/nginx/nginx.conf를 대체
 
   frontend:
-    build: ./frontend
-    expose:
-      - 3000
-      # ports:
-      #   - 3000:80
-      # react-scripts 3.4.1 이상에서 발생하는 exited with code 0 에러 해결법
-      # https://github.com/facebook/create-react-app/issues/8688
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./frontend
+    # 소스코드를 수정한 후 이미지를 다시 빌드하지 않아도 수정된 코드가 반영되게끔 volume 설정
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    # react-scripts 3.4.1 이상에서 발생하는 exited with code 0 에러 해결법 (stdin_open)
+    # https://github.com/facebook/create-react-app/issues/8688
     stdin_open: true
     tty: true
 
   backend-node:
-    build: ./backend-node
-    # ports:
-    #   - 3001:3001
-    expose:
-      - 3001
-    environment:
-      # 콘테이너 내 환경변수를 정의
-      - NODE_PATH
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./backend-node
+    volumes:
+      - /app/node_modules
+      - ./backend-node:/app
 
   backend-flask:
-    build: ./backend-flask
-    expose:
-      - 5000
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./backend-flask
+    volumes:
+      - /app/node_modules
+      - ./backend-flask:/app
+    # expose:
+    #   - 5000
     # ports:
     #   - 5000:5000
-
     # docker rm -f $(docker ps -aq)
     # docker rmi $(docker images -q)
 
