@@ -328,8 +328,8 @@ if __name__ == "__main__":
     # 0.0.0.0으로 바꿔야 모든 ip에 대해서 listen한다. default인 경우 127.0.0.1에 대해서만 listen
     load_models()
     # Produciton 모드에서는 Debug를 사용하면 안된다. 
-    app.run(debug=True)
+    # app.run(debug=True)
     # app.run(host='127.0.0.1', port=5000)
-    app.run(host='0.0.0.0', port=5000)
+    app.run(port=5000)
 
 # nginx + gunicorn or apache

@@ -1,14 +1,12 @@
 version: '3'
 services:
   nginx_proxy:
-    build: ./nginx
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
     # local(host) 3000 포트와 컨테이너 안의 80번 포트를 매핑
     ports:
       - 3000:80
-    depends_on:
-      - frontend
-      - backend-node
-      - backend-flask
     restart: always
 
   frontend:
