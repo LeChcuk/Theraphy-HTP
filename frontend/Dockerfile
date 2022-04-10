@@ -3,7 +3,7 @@
 # alpine image는 5MB 정도의 작은 용량을 보유해서 Docker Documnet가 권장한다. 
 # FROM <image>[:<tag>]
 # FROM <image>[@<digest>]
-FROM node:14-alpine as builder
+FROM node:14-alpine
 
 # 작업 디렉토리를 set하여 이후 RUN, CMD, COPY 등의 명령이 이 작업 디렉토리에서 수행된다
 # WORKDIR command를 사용하면 절대 경로로 일일이 path을 명시할 필요 없이 상대 경로로 간편하게(.) 사용할 수 있다
@@ -25,16 +25,8 @@ COPY webpackDevServer.config.js ./node_modules/react-scripts/config/
 
 # CMD 명령은 Docker image로 Docker container를 생성한 뒤 container를 실행할 떄 수행된다.
 # CMD와 ENTRPYPOINT는 유사하게 동작하나, CMD는 CLI에서 명령어 입력을 통해 좀 더 가변적으로 동작시킬 수가 있다.
-RUN npm run build
+ENTRYPOINT npm start
 
 # EXPOSE <port>/<protocol>
 # default protocol : TCP
-
-FROM nginx:latest as run
 EXPOSE 3000
-
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/build /usr/share/nginx/html
-# 위에서 정의한 builder 스테이지에서 빌드된 파일을 복사
-# usr/share/nginx/html 에 파일들을 복사한다.
-# 이 경로는 nginx가 정적 파일을 브라우저에 제공할 수 있게 기본적으로 설정된 장소다.

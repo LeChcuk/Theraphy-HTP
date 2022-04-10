@@ -1,0 +1,676 @@
+[33mcommit d7c331c778c8a363247cb2eef130e12bdb69c63f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 11 01:29:55 2022 +0900
+
+    Revert "GET http -> https erorr at front"
+    
+    This reverts commit 54de73a296d46fc241ded3d86e877efb63d032b9.
+
+[33mcommit c1414b4eb638a671d4787144d7008542f6b6546b[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 11 01:27:51 2022 +0900
+
+    nginx
+
+[33mcommit 7a1a9438fb6a0312566e1052afe6170f12b3d53b[m[33m ([m[1;32mdev[m[33m)[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 10 23:24:01 2022 +0900
+
+    nginx
+
+[33mcommit 0affe706d7044734bf11c3b34d0cd97138a93f80[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 10 18:17:28 2022 +0900
+
+    nginx
+
+[33mcommit 624eeef52b43888982b871c1f36e306ce10f9c37[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 9 15:24:41 2022 +0900
+
+    before book
+
+[33mcommit ab967b159eaf5552d00dde47939a31a1f2c25a6e[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 8 13:26:26 2022 +0900
+
+    nginx
+
+[33mcommit 2654271bf408751ab3ca8f0766f6ac0ff1cdd5c7[m
+Merge: 54de73a a73d941
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 8 01:05:26 2022 +0900
+
+    Merge branch 'dev' into master
+
+[33mcommit a73d941023bfeca7fef699b54fcc991c72b371f3[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 8 01:03:51 2022 +0900
+
+    nginx
+
+[33mcommit 91b76ef2c1d38f65d5a71fe08edd93099f12c7b1[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Thu Apr 7 21:41:08 2022 +0900
+
+    trying to nginx
+
+[33mcommit 54de73a296d46fc241ded3d86e877efb63d032b9[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Apr 6 14:05:37 2022 +0900
+
+    GET http -> https erorr at front
+
+[33mcommit 0e9ba9479cfd38f3303dfaf11fa87076f60222ee[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Apr 6 11:50:29 2022 +0900
+
+    403 error at cloudFront
+
+[33mcommit 10c93222268aaed05e709921537c61fc0c5e7dd8[m
+Author: JaeWook Park <pjwts9412@gmail.com>
+Date:   Wed Apr 6 10:23:45 2022 +0900
+
+    Update README.md
+
+[33mcommit f1ce2bf05cb9aacd4c9ea10107e4766803836314[m
+Author: JaeWook Park <pjwts9412@gmail.com>
+Date:   Wed Apr 6 10:22:45 2022 +0900
+
+    Update README.md
+
+[33mcommit 2b20fa38b2d0d502d076baff1b8777ab0d27dfc9[m
+Author: JaeWook Park <pjwts9412@gmail.com>
+Date:   Wed Apr 6 10:11:00 2022 +0900
+
+    Update README.md
+
+[33mcommit 00cc9270e1c603e24f97cedd0223c016ac824e53[m
+Author: JaeWook Park <pjwts9412@gmail.com>
+Date:   Tue Apr 5 23:40:14 2022 +0900
+
+    Update README.md
+
+[33mcommit fdfd047bf28bcf9e2dbd4f4e7d948f72ccc41fef[m
+Author: JaeWook Park <pjwts9412@gmail.com>
+Date:   Tue Apr 5 23:39:55 2022 +0900
+
+    Update README.md
+
+[33mcommit 8bd4ff399169ac4163252b78bef086cbef6aa52e[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 17:17:35 2022 +0900
+
+    https to http error found
+
+[33mcommit 9de3dbb7929425bfd371ee6860120807ff0e60c2[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 13:53:42 2022 +0900
+
+    remove lfs and adopt S3
+
+[33mcommit 4fad99e8d49bd8a6fed31fd99fda87d945d7f1bf[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 13:36:24 2022 +0900
+
+    remove lfs and adopt S3
+
+[33mcommit 1566a906b73914e378021fccac4a055f825e0c9b[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 13:32:13 2022 +0900
+
+    remove lfs and adopt S3
+
+[33mcommit 06c61c88bbb3fad23b71f3c26bf1ec50fa0ca639[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 13:17:58 2022 +0900
+
+    remove lfs and adopt S3
+
+[33mcommit 4120fc422884210277c24c06629bb30fbe001ccb[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 13:15:07 2022 +0900
+
+    remove lfs and adopt S3
+
+[33mcommit 54d669e9aa01ef19d89a58a7162bd599e19d83ad[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 11:19:23 2022 +0900
+
+    test
+
+[33mcommit aad2daa82f1c7cc003274f8cbd94fd2e1a1fb71e[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 01:08:09 2022 +0900
+
+    change appSpec afterinstall timeout
+
+[33mcommit 1205b4681970a3ae1a2c50e3fc143e3cdbcdfc14[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 00:59:24 2022 +0900
+
+    remove lfs
+
+[33mcommit d9e6e6fd7cddbb0e7ca80b6138cf5b880011e2e1[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 00:43:02 2022 +0900
+
+    test
+
+[33mcommit 248554c84ccfd84d9e00a6345221123cb9bb2585[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Mon Apr 4 00:16:42 2022 +0900
+
+    add git lfs
+
+[33mcommit d22690301938f77240024b9dc687ab278dddbfc8[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 3 23:54:13 2022 +0900
+
+    add git lfs
+
+[33mcommit 094be469b4304cf32b26394f600b221e94764077[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 3 23:53:29 2022 +0900
+
+    add git lfs
+
+[33mcommit fb5aa223081a8721fb4ad4fcad896492692059aa[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 3 23:24:51 2022 +0900
+
+    add comment which remove all docker images
+
+[33mcommit a930796f0f8fdd1c04dd168bc171428cc3ad8d15[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 3 20:14:12 2022 +0900
+
+    invalid Host header ERROR
+
+[33mcommit ab69e0427e625f4de5013dd41371398969b95388[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 3 16:35:47 2022 +0900
+
+    test deployment
+
+[33mcommit 529e3758816c30a9191eb798eecacb8b1357c062[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Apr 3 13:38:14 2022 +0900
+
+    change the folder structrue
+
+[33mcommit ce4c882c8a08aea4c22e217091b7882da9b639d9[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:57:42 2022 +0900
+
+    workflow is alomost done
+
+[33mcommit 7fb95c5d9edd0d4e610de13aaa2bbb2ca1d6ba46[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:56:08 2022 +0900
+
+    workflow is alomost done
+
+[33mcommit 78de78975c4774352e2c8f4a38e784799986fcb2[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:55:36 2022 +0900
+
+    workflow is alomost done
+
+[33mcommit a8ebcfa7a0c4309ad91f6dddb3e3c3b2625a8472[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:46:49 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 73f52f353b0f8e41d9d539e76c30a0f87f1f0fa4[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:21:17 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 1f832658a53dcc8a977c0873751fbc64a4752d8b[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:18:54 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit b3fa857f5cb9f47f0f6103a739f5f83990893fbd[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:16:35 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 5d8daeba3428fd9ad041c279d74e01fa1b650fdd[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 23:04:17 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit d74b3788d3f384eafa6c29188d59671a16b0a094[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 18:59:00 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit a9cc7f02a50455c9f7f5e7d3627bc69c3f046b05[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 18:56:24 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 49bf12f3d34f2beed3e22eb61b087128c650a1e6[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 18:44:56 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 92cecdbd7b1946e8b13c025cf4f0a0ffd77bc134[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 18:38:32 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit e6c1df5418c7cde05095704bd7ebab55ae5280c8[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 18:33:00 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 9654d264ed0cad922b947514c3071b365d29d144[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 18:25:29 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit d32d144f4b31cc0bf6bfbec0244587265b8a8069[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 18:24:04 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit c99cf8acb4745a0c6bb8ed623cabb9da40e316f6[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 17:22:15 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit ce0aeb670f7c045a6236bf9aef0c1e8ef500f82f[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 16:28:24 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit f067a9e7327fcc7f81f840f30fc15bfe6f6a603e[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 16:27:20 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit f1f1b049a217b97ef66cffa711e6a7537e7d3162[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 16:08:18 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit fa7ce20e1acb7910b89070e84caa21babefdf6c2[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 15:31:22 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 3330f26e7d5ef2aafbc89386ff407ecdc21d79fa[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 15:27:32 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 10e1eb4ca83a95fb4d5ed3ae765ee7b3b6705235[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 15:25:32 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 2a0e1f66ed7f89efe53596c27985db394982d9e6[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 15:23:06 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 41af44dbf40b5911377eb60c00c5643f8aec5610[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sat Apr 2 15:21:18 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit df5435ee45065abd13548a6bba12c8545ac86d9d[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 1 23:39:31 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 73bbbca5b284188051ccab0329639fa001f6b19a[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 1 23:29:02 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit e40d87ea4abf4492a1757e6ad37a117af4167a29[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 1 22:55:07 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit d24daa95c25851333b27a10b6b43ed1d6515999a[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 1 22:42:44 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 2278a3a74d6e1dde38b838f531c401a7473d0a9f[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Fri Apr 1 22:28:54 2022 +0900
+
+    trying to establish CICD
+
+[33mcommit 477def847e2677a4fbca05eaef5f3ee108f31b63[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Thu Mar 31 00:50:14 2022 +0900
+
+     Trying to get docker to work on Ec2
+
+[33mcommit c1e3596699287fa3f5322a71b957b73cf4fa4081[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 23:32:52 2022 +0900
+
+     Trying to get docker to work on Ec2
+
+[33mcommit 038f3b6fd420a548579dbad814f0913cfdb06353[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 21:52:02 2022 +0900
+
+     Trying to get docker to work on Ec2
+
+[33mcommit c24d0d8e9047f5a2f1f2bc9cc7add53a47fb2a79[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 18:29:01 2022 +0900
+
+     Trying to get docker to work on Ec2
+
+[33mcommit bb9679679286b46cf0345dd0bfe7ce69d01d6065[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 18:07:09 2022 +0900
+
+     Trying to get docker to work on Ec2
+
+[33mcommit d71f875ff5f592e45ea8db50e42380b2b53f7451[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 17:46:30 2022 +0900
+
+    modify dockerfiles
+
+[33mcommit f7e6c775432001b2f4494850e55f7c8601ed5759[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 17:33:53 2022 +0900
+
+    change local -> AWS IP
+
+[33mcommit 7eb0ffb75299860001084eb27657672538728c25[m
+Merge: 0e1dbca fffec8b
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 17:12:36 2022 +0900
+
+    Merge branch 'master' of https://github.com/LeChcuk/Theraphy-HTP into master
+
+[33mcommit 0e1dbca0d35795367d10e52ec72b6e9d1330f01f[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 17:11:50 2022 +0900
+
+    change local -> AWS IP
+
+[33mcommit fffec8b15a4e3aa6c8b8cf9714011403ca593167[m
+Author: LeChcuk <pjwts9412@gmail.com>
+Date:   Wed Mar 30 15:12:04 2022 +0900
+
+    add github-actions status banner
+
+[33mcommit 855c8205007fcd3974df30fa8e9b3417fb2c154d[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 14:55:23 2022 +0900
+
+    trying to apply github-actions
+
+[33mcommit e0687657ddaf711d4b7fe11fe625e2901ce7b835[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 14:41:54 2022 +0900
+
+    trying to apply github-actions
+
+[33mcommit b688daa06ae7b4497bde61544388d682409b192b[m
+Author: LeChcuk <pjwts9412@gmail.com>
+Date:   Wed Mar 30 14:30:27 2022 +0900
+
+    Create docker-image.yml
+
+[33mcommit ec36f7b9a95cc62a5dcfd9edebc8f0a2b5086fd2[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Mar 30 12:52:17 2022 +0900
+
+    add some packages for security in backend-node
+
+[33mcommit 16186f4d97af7e2c60270c6643a67413493a2ca4[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Mar 27 19:27:25 2022 +0900
+
+    docker added
+
+[33mcommit 4d5ee39e41d0f9be2ad2d78f13c6aaf66b873d1c[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Sun Mar 27 19:17:07 2022 +0900
+
+    docker added
+
+[33mcommit 6f66700e9d9cdbb2e3157a5ee602c61c1e8fecfb[m[33m ([m[1;32mdocker[m[33m)[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Fri Dec 18 12:31:40 2020 +0900
+
+    Update README.md
+
+[33mcommit 2aac0bffe62967da29900947e4b3935cfd8b4965[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Fri Dec 18 12:30:46 2020 +0900
+
+    Update README.md
+
+[33mcommit 049c0ba2738fa68a667de79ca1d6e07f0e70a80e[m
+Merge: ed3b444 3f23c6c
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Thu Nov 19 17:36:39 2020 +0900
+
+    Merge branch 'master' of https://github.com/pjw9412/Theraphy-HTP into master
+
+[33mcommit ed3b4448343016daee224860c180874a12e8a4ed[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Thu Nov 19 17:36:16 2020 +0900
+
+    add annotation folder
+
+[33mcommit 3f23c6c156fd1e6134a67859cd3b25d134a4e180[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Thu Nov 19 17:33:48 2020 +0900
+
+    Update README.md
+
+[33mcommit b06fbc522c3db10960f55d9fbfaaeb782337ea13[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Thu Nov 19 17:33:36 2020 +0900
+
+    Update README.md
+
+[33mcommit 959e6d9cf4d87f9a961d9dbeafe22d2adcda2bc1[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Thu Nov 19 17:33:24 2020 +0900
+
+    Update README.md
+
+[33mcommit f355f807d58507ddab8c741c3dc2b9c79ee00d4f[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Thu Nov 19 17:33:08 2020 +0900
+
+    Update README.md
+
+[33mcommit 6b2b80a13fb96f0279de76970531ae569c8aa45f[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Thu Nov 19 16:53:38 2020 +0900
+
+    Create README.md
+
+[33mcommit bed4cf45986cacde97ab5722446b661c6fb54124[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Thu Nov 19 12:31:06 2020 +0900
+
+    update flask code and model
+
+[33mcommit 43344a49b600e95b9ef69b59d61b16ec218fda0f[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Thu Nov 19 11:12:53 2020 +0900
+
+    add more data and upgrade model
+
+[33mcommit 6159d74e73d65ae90475859a52aab8a6975dca25[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Nov 11 00:44:16 2020 +0900
+
+    deep
+
+[33mcommit 0abdfc6c811f951ef6c089436ee82db59b4f89ff[m
+Author: pjw9412 <39594520+pjw9412@users.noreply.github.com>
+Date:   Wed Nov 11 00:42:01 2020 +0900
+
+    Colaboratory를 통해 생성됨
+
+[33mcommit c105e8c807e0e5fb9ffbd6f2cb6cfce3301c5361[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Nov 11 00:39:52 2020 +0900
+
+    deep
+
+[33mcommit 0402807a5e2ab8438528b495887bf302b43a4b75[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Wed Nov 11 00:26:31 2020 +0900
+
+    1
+
+[33mcommit 227519ae0427cac91120fbcf7ef87e3b73d89b6d[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Tue Nov 10 23:32:25 2020 +0900
+
+    1
+
+[33mcommit 8ba1992f7e6fba6a59c02867afba73f4e50e1290[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Tue Nov 10 23:31:05 2020 +0900
+
+    1
+
+[33mcommit 3369d6dc61949ab133d9cca7ca29279c191a4641[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Tue Nov 10 23:28:57 2020 +0900
+
+    lfs
+
+[33mcommit e9db6bec049639c156e50c115f4b10de9a8c6c7a[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Tue Nov 10 23:20:03 2020 +0900
+
+    flask
+
+[33mcommit 7a8e28044700eb374cd6564e0ed96741f09e4c39[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 23:14:17 2020 +0900
+
+    flask
+
+[33mcommit 12a38c9ded9cf58b8f957a427f8d126d82d44e06[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 23:03:10 2020 +0900
+
+    1
+
+[33mcommit 0f3cbae3dd03d2b14fa96db86915b784b1acd5f5[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Tue Nov 10 21:13:46 2020 +0900
+
+    flask
+
+[33mcommit 9f8b11223abea251fe37636e230725f66d53dc84[m
+Author: pjw9412 <pjwts9412@gmail.com>
+Date:   Tue Nov 10 20:52:30 2020 +0900
+
+    1
+
+[33mcommit df7755d14a37f80be993fd6c2a9f571e6cbe2389[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 16:29:12 2020 +0900
+
+    1
+
+[33mcommit 60a18bdfdc1fa3e28a1827c93157e48236eff0d1[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 16:28:13 2020 +0900
+
+    1
+
+[33mcommit b112171527dc57e7d1c42e582f6c847fcb245dbb[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 16:26:44 2020 +0900
+
+    1
+
+[33mcommit 3b59b6d25b4f86d1da39997b5ec015da92c2e229[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 16:08:54 2020 +0900
+
+    add flask
+
+[33mcommit 130c7844a0b852a53b42b7988a5481418db1cdad[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 15:29:32 2020 +0900
+
+    file delete
+
+[33mcommit 1703bf3f4730e573d6f16814b4bf94210b238d10[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 15:25:10 2020 +0900
+
+    22
+
+[33mcommit 17bef4761650e2880d2c1a1dc35fa0dc9cfbec9b[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 15:20:10 2020 +0900
+
+    conten changedddddd
+
+[33mcommit adfc44a695353616e54754b7a6cb7fc454f959c1[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 15:07:11 2020 +0900
+
+    react updated
+
+[33mcommit 0e4f5ca58f289bb6bf02c08cfab0c3308aaa937e[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 14:31:25 2020 +0900
+
+    node
+
+[33mcommit 9f3fa1348fc90a6fad758c42376a1e2a63495c91[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 01:40:58 2020 +0900
+
+    add react submodule
+
+[33mcommit 5721b8ac74314568b5fc1ecdfaa9bb4315627a56[m
+Author: pjw <pjwts9412@gmail.com>
+Date:   Tue Nov 10 01:36:11 2020 +0900
+
+    parent

@@ -11,9 +11,8 @@ const axiosRequest = async (filePath) => {
         // flask API와의 통신인듯.
         var response = await axios
             .create({ headers: formData.getHeaders() })
-            // .post('http://54.180.152.70:5000/predict', formData);
-            // .post('/predict', formData);
-            .post('/predict', formData); // docker
+            .post('http://54.180.152.70:5000/predict', formData);
+        // .post('http://172.17.0.1:5000/predict', formData); // docker
         //.post('http://54.180.114.163:5000/predict',formData);          // old AWS EC2
         // .post('htpps://13.209.65.139:5000/predict',formData); // 가장 최신(22.03.24)
         // .post('https://theraphy-flask-heroku2.herokuapp.com/predict', formData);   // Server

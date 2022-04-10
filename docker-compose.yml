@@ -1,48 +1,18 @@
 version: '3'
 services:
-  nginx_proxy:
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    # local(host) 3000 포트와 컨테이너 안의 80번 포트를 매핑
-    ports:
-      - 3000:80
-    restart: always
-
   frontend:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./frontend
-    # 소스코드를 수정한 후 이미지를 다시 빌드하지 않아도 수정된 코드가 반영되게끔 volume 설정
-    volumes:
-      - /app/node_modules
-      - ./frontend:/app
-    # react-scripts 3.4.1 이상에서 발생하는 exited with code 0 에러 해결법 (stdin_open)
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    # react-scripts 3.4.1 이상에서 발생하는 exited with code 0 에러 해결법
     # https://github.com/facebook/create-react-app/issues/8688
     stdin_open: true
     tty: true
-
   backend-node:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./backend-node
-    volumes:
-      - /app/node_modules
-      - ./backend-node:/app
-
+    build: ./backend-node
+    ports:
+      - "3001:3001"
   backend-flask:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./backend-flask
-    volumes:
-      - /app/node_modules
-      - ./backend-flask:/app
-    # expose:
-    #   - 5000
-    # ports:
-    #   - 5000:5000
-    # docker rm -f $(docker ps -aq)
-    # docker rmi $(docker images -q)
-
-    # docker-compose build --no-cache && docker-compose up -d
-    # docker exec d96c6ad93d5b83bd25c2c1e36b92b95b0208ededb64a14cccf473d122a46537d  bash -c "cd /var/log/nginx; cat error.log"
+    build: ./backend-flask
+    ports:
+      - "5000:5000"

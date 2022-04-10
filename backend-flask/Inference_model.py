@@ -38,7 +38,7 @@ def load_models():
 # For the root '/predict' we need to define a function named predict
 # This function will take values from the ajax request and performs the prediction
 # By getting response from flask to ajax
-@app.route("/node/predict", methods=["POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     data = {"success": False}
     if flask.request.method == "POST":
@@ -322,6 +322,7 @@ def getRatio(a,b):
 
 if __name__ == "__main__":
     print(("* Loading Keras model and Flask starting server..." "please wait until server has fully started"))
+    print("START")
 
     # change the host and port as 0.0.0.0. / 5000 when we need to deploy our app to AWS
     # defaualt(local) is 127.0.0.1 / 5000
@@ -330,6 +331,6 @@ if __name__ == "__main__":
     # Produciton 모드에서는 Debug를 사용하면 안된다. 
     # app.run(debug=True)
     # app.run(host='127.0.0.1', port=5000)
-    app.run(port=5000)
+    app.run(host='0.0.0.0', port=5000)
 
 # nginx + gunicorn or apache
